@@ -13,6 +13,9 @@ migrate_working_dir/
 # Example project
 /example
 
+# Test folder
+/test
+
 # IntelliJ related
 *.iml
 *.ipr
