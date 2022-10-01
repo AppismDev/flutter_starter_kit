@@ -38,17 +38,55 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+  fonts:
+    - family: AntDesign
+      fonts:
+        - asset: fonts/AntDesign.ttf
+    - family: Entypo
+      fonts:
+        - asset: fonts/Entypo.ttf
+    - family: EvilIcons
+      fonts:
+        - asset: fonts/EvilIcons.ttf
+    - family: Feather
+      fonts:
+        - asset: fonts/Feather.ttf
+    - family: FontAwesome
+      fonts:
+        - asset: fonts/FontAwesome.ttf
+    - family: FontAwesome5_Brands
+      fonts:
+        - asset: fonts/FontAwesome5_Brands.ttf
+    - family: FontAwesome5_Regular
+      fonts:
+        - asset: fonts/FontAwesome5_Regular.ttf
+    - family: FontAwesome5_Solid
+      fonts:
+        - asset: fonts/FontAwesome5_Solid.ttf
+    - family: Fontisto
+      fonts:
+        - asset: fonts/Fontisto.ttf
+    - family: Foundation
+      fonts:
+        - asset: fonts/Foundation.ttf
+    - family: Ionicons
+      fonts:
+        - asset: fonts/Ionicons.ttf
+    - family: MaterialCommunityIcons
+      fonts:
+        - asset: fonts/MaterialCommunityIcons.ttf
+    - family: MaterialIcons
+      fonts:
+        - asset: fonts/MaterialIcons.ttf
+    - family: Octicons
+      fonts:
+        - asset: fonts/Octicons.ttf
+    - family: SimpleLineIcons
+      fonts:
+        - asset: fonts/SimpleLineIcons.ttf
+    - family: Zocial
+      fonts:
+        - asset: fonts/Zocial.ttf
+
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
