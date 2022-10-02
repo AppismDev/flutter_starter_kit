@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_kit/enums/device_type.dart';
 import 'package:flutter_starter_kit/extensions/constants/context_extension_constants.dart';
 
-import '../enums/device_type.dart';
 
 /// Extension for [BuildContext] to get [MediaQuery] data
 extension MediaQueryExtension on BuildContext{
