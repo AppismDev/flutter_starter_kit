@@ -1,7 +1,8 @@
+
+/// Flutter Starter Kit.
+/// A library that helps you to start your Flutter project quickly.
+///
 library flutter_starter_kit;
 
 
-/// Flutter Starter Kit.
-class FlutterStarterKit {
-
-}
+export 'extensions/fsk_extensions.dart';
