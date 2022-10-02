@@ -3,6 +3,7 @@ extension StringExtensions on String {
   ///
   /// ```dart
   /// print('flutter'.capitalizeFirstLetter) // Flutter
+  /// print('flutter starter kit'.capitalizeFirstLetter) // Flutter starter kit
   /// print('Flutter'.capitalizeFirstLetter) // Flutter
   /// ```
 
@@ -24,8 +25,9 @@ extension StringExtensions on String {
   /// Decapitalizes first letter of this [String]
   ///
   /// ```dart
-  /// print('Flutter'.capitalizeFirstLetter) // flutter
-  /// print('flutter'.capitalizeFirstLetter) // flutter
+  /// print('Flutter'.decapitalizeFirstLetter) // flutter
+  /// print('Flutter Starter Kit'.decapitalizeFirstLetter) // flutter Starter Kit
+  /// print('flutter'.decapitalizeFirstLetter) // flutter
   /// ```
   String get decapitalizeFirstLetter =>
       isNotEmpty ? this[0].toLowerCase() + substring(1) : this;
@@ -33,8 +35,8 @@ extension StringExtensions on String {
   /// Capitalize first letters of this [String]
   ///
   /// ```dart
-  /// print('Flutter Starter Kit'.capitalizeFirstLetter) // flutter starter kit
-  /// print('flutter starter kit'.capitalizeFirstLetter) // flutter starter kit
+  /// print('Flutter Starter Kit'.decapitalizeFirstLetters) // flutter starter kit
+  /// print('flutter starter kit'.decapitalizeFirstLetters) // flutter starter kit
   /// ```
   String get decapitalizeFirstLetters {
     return split(' ')
@@ -59,4 +61,24 @@ extension StringExtensions on String {
   String placeholder({String placeholder = ''}) {
     return isBlank ? placeholder : this;
   }
+
+  /// Returns `true` if the whole string is lower case.
+  ///
+  /// ```dart
+  /// 'fsk'.isLowerCase // true
+  /// 'Fsk'.isLowerCase // false
+  /// '!'.isLowerCase // false
+  /// 'fsk is awesome!'.isLowerCase // true
+  /// ```
+  bool get isLowerCase => this == toLowerCase() && this != toUpperCase();
+
+  /// Returns `true` if the whole string is upper case.
+  ///
+  /// ```dart
+  /// 'FSK'.isUpperCase // true
+  /// 'Fsk'.isUpperCase // false
+  /// '!'.isUpperCase // false
+  /// 'FSK IS AWESOME!'.isUpperCase // true
+  /// ```
+  bool get isUpperCase => this == toUpperCase() && this != toLowerCase();
 }
