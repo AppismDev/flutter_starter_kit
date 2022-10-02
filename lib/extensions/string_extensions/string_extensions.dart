@@ -42,10 +42,21 @@ extension StringExtensions on String {
         .join(' ');
   }
 
-  /// Returns a bool value indicating whether this [String] is empty or not
+  /// Returns a [bool] value indicating whether this [String] is empty or not
   ///
   ///```dart
   /// print(''.isBlank) // true
+  /// print('flutter'.isBlank) // false
   ///```
   bool get isBlank => trimLeft().isEmpty;
+
+  /// Returns a placeholder [String] if this [String] is empty
+  ///   ///
+  ///```dart
+  /// print(''.placeholder(placeholder:"Flutter Starter Kit")) // Flutter Starter Kit
+  /// print('Some Text'.placeholder(placeholder:"Flutter Starter Kit")) // Some Text
+  ///```
+  String placeholder({String placeholder = ''}) {
+    return isBlank ? placeholder : this;
+  }
 }
