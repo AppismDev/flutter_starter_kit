@@ -18,6 +18,4 @@ extension DurationExtensions on BuildContext{
   /// Extra-high [Duration] for animations.
   Duration get extraHighDuration => const Duration(milliseconds: 500);
 
-
-
 }
