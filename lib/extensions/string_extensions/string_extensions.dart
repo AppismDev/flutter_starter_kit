@@ -81,4 +81,48 @@ extension StringExtensions on String {
   /// 'FSK IS AWESOME!'.isUpperCase // true
   /// ```
   bool get isUpperCase => this == toUpperCase() && this != toLowerCase();
+
+  /// Returns `true` if the string contains only digits.
+  ///
+  /// ```dart
+  /// '123'.isDigitsOnly // true
+  /// '123a'.isDigitsOnly // false
+  /// '123.0'.isDigitsOnly // false
+  /// '123 '.isDigitsOnly // true
+  /// '  123  '.isDigitsOnly // true
+  /// ```
+  bool get isNumeric => num.tryParse(this) != null ? true : false;
+
+  /// Returns `true` if the string contains only letters.
+  ///
+  /// ```dart
+  /// 'abc'.isLettersOnly // true
+  /// 'abc1'.isLettersOnly // false
+  /// 'abc def'.isLettersOnly // false
+  /// ```
+  bool get isLettersOnly {
+    for (var i = 0; i < length; i++) {
+      if (codeUnitAt(i) < 65 ||
+          codeUnitAt(i) > 90 && codeUnitAt(i) < 97 ||
+          codeUnitAt(i) > 122) return false;
+    }
+    return true;
+  }
+
+  /// Returns `true` if the string contains only letters or digits.
+  ///
+  /// ```dart
+  /// 'abc123'.isAlphanumericOnly // true
+  /// 'abc'.isAlphanumericOnly // true
+  /// 'abc def'.isAlphanumericOnly // false
+  /// ```
+  bool get isAlphanumericOnly {
+    for (var i = 0; i < length; i++) {
+      if (codeUnitAt(i) < 48 ||
+          codeUnitAt(i) > 57 && codeUnitAt(i) < 65 ||
+          codeUnitAt(i) > 90 && codeUnitAt(i) < 97 ||
+          codeUnitAt(i) > 122) return false;
+    }
+    return true;
+  }
 }
