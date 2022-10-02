@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+/// Ant Design Icons - resource: react-native-vector-icons
 class AntDesign {
   static const IconData stepForward = IconData(58880, fontFamily: "AntDesign");
   static const IconData stepBackward = IconData(58881, fontFamily: "AntDesign");
