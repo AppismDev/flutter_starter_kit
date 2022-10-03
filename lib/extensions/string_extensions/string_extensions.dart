@@ -82,47 +82,38 @@ extension StringExtensions on String {
   /// ```
   bool get isUpperCase => this == toUpperCase() && this != toLowerCase();
 
-  /// Returns `true` if the string contains only digits.
+  /// Checks if this [String] is numeric only
   ///
   /// ```dart
-  /// '123'.isDigitsOnly // true
-  /// '123a'.isDigitsOnly // false
-  /// '123.0'.isDigitsOnly // false
-  /// '123 '.isDigitsOnly // true
-  /// '  123  '.isDigitsOnly // true
+  /// print('123'.isNumericOnly) // true
+  /// print('123!'.isNumericOnly) // false
+  /// print('abc'.isNumericOnly) // false
+  /// print('abc123'.isNumericOnly) // false
+  /// print(''.isNumericOnly) // true
   /// ```
-  bool get isNumeric => num.tryParse(this) != null ? true : false;
+  bool get isNumericOnly => RegExp(r'^[0-9]+$').hasMatch(this);
 
-  /// Returns `true` if the string contains only letters.
+  /// Checks if this [String] is alphabetic only
   ///
   /// ```dart
-  /// 'abc'.isLettersOnly // true
-  /// 'abc1'.isLettersOnly // false
-  /// 'abc def'.isLettersOnly // false
+  /// print('abc'.isAlphabeticOnly) // true
+  /// print('abc123'.isAlphabeticOnly) // false
+  /// print('abc123!'.isAlphabeticOnly) // false
+  /// print('123'.isAlphabeticOnly) // false
+  /// print('123!'.isAlphabeticOnly) // false
+  /// print(''.isAlphabeticOnly) // false
   /// ```
-  bool get isLettersOnly {
-    for (var i = 0; i < length; i++) {
-      if (codeUnitAt(i) < 65 ||
-          codeUnitAt(i) > 90 && codeUnitAt(i) < 97 ||
-          codeUnitAt(i) > 122) return false;
-    }
-    return true;
-  }
+  bool get isAlphabeticOnly => RegExp(r'^[a-zA-Z]+$').hasMatch(this);
 
-  /// Returns `true` if the string contains only letters or digits.
+  /// Checks if this [String] is alphanumeric only
   ///
   /// ```dart
-  /// 'abc123'.isAlphanumericOnly // true
-  /// 'abc'.isAlphanumericOnly // true
-  /// 'abc def'.isAlphanumericOnly // false
+  /// print('abc123'.isAlphanumericOnly) // true
+  /// print('abc123!'.isAlphanumericOnly) // false
+  /// print('abc'.isAlphanumericOnly) // true
+  /// print('123'.isAlphanumericOnly) // true
+  /// print('123!'.isAlphanumericOnly) // false
+  /// print(''.isAlphanumericOnly) // false
   /// ```
-  bool get isAlphanumericOnly {
-    for (var i = 0; i < length; i++) {
-      if (codeUnitAt(i) < 48 ||
-          codeUnitAt(i) > 57 && codeUnitAt(i) < 65 ||
-          codeUnitAt(i) > 90 && codeUnitAt(i) < 97 ||
-          codeUnitAt(i) > 122) return false;
-    }
-    return true;
-  }
+  bool get isAlphanumericOnly => RegExp(r'^[a-zA-Z0-9]+$').hasMatch(this);
 }
