@@ -2,30 +2,27 @@ import 'package:flutter/material.dart';
 
 /// Extension for [BuildContext] to get [Radius]
 extension RadiusExtension on BuildContext {
+
+
+
   /// extra-low radius value
-  double get radiusExtraLowValue => 4;
-
+  double get radiusExtraLowValue => 2;
   /// low radius value
-  double get radiusLowValue => 8;
-
+  double get radiusLowValue => 4;
   /// medium radius value
-  double get radiusMediumValue => 16;
-
+  double get radiusMediumValue => 8;
   /// high radius value
-  double get radiusHighValue => 24;
-
+  double get radiusHighValue => 16;
   /// extra-high radius value
   double get radiusExtraHighValue => 32;
 
+
   ///  extra-low-radius with [radiusExtraLowValue]
   Radius get radiusExtraLow => Radius.circular(radiusExtraLowValue);
-
   ///  low-radius with [radiusLowValue]
   Radius get radiusLow => Radius.circular(radiusLowValue);
-
   ///  medium-radius with [radiusMediumValue]
   Radius get radiusMedium => Radius.circular(radiusMediumValue);
-
   ///  high-radius with [radiusHighValue]
   Radius get radiusHigh => Radius.circular(radiusHighValue);
 

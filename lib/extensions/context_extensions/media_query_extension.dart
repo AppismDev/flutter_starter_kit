@@ -38,12 +38,19 @@ extension MediaQueryExtension on BuildContext{
   /// Get a quarter of the width
   double get quarterTheWidth => dynamicWidth(25);
 
-  /// dynamic values with [dynamicHeight]
-  double get extraLowValue => dynamicHeight(1);
-  double get lowValue => dynamicHeight(2);
-  double get mediumValue => dynamicHeight(4);
-  double get highValue => dynamicHeight(8);
-  double get extraHighValue => dynamicHeight(16);
+  /// dynamic vertical values with [dynamicHeight]
+  double get extraLowValueVertical => dynamicHeight(1);
+  double get lowValueVertical => dynamicHeight(2);
+  double get mediumValueVertical => dynamicHeight(4);
+  double get highValueVertical => dynamicHeight(8);
+  double get extraHighValueVertical => dynamicHeight(16);
+
+  /// dynamic horizontal values with [dynamicWidth]
+  double get extraLowValueHorizontal => dynamicWidth(1);
+  double get lowValueHorizontal => dynamicWidth(2);
+  double get mediumValueHorizontal => dynamicWidth(4);
+  double get highValueHorizontal => dynamicWidth(8);
+  double get extraHighValueHorizontal => dynamicWidth(16);
 
   /// Is the device a small device?
   bool get isSmallDevice {
